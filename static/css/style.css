@@ -16,6 +16,8 @@ p {
   color: azure;
   padding: 1.5rem;
 }
+/* header */
+
 a{
   text-decoration: none;
   color: aqua;
@@ -187,6 +189,7 @@ section {
   width: 200px;
   height: auto;
   border-radius: 50%;
+  border: solid tomato 2px;
 }
 
 .slider {
@@ -254,6 +257,9 @@ section {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
+  .slider{
+    width: 90%;
+  }
   .slider-btn {
     padding: 0.5rem;
     font-size: 1.5rem;

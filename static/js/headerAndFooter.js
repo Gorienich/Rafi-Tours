@@ -69,31 +69,31 @@ document.addEventListener('DOMContentLoaded', function () {
   // Share functions 
   function shareOnWhatsApp() {
     const phoneNumber = ''; // Add your phone number here
-    const message = 'Check out this amazing tour guide: https://gorienich.github.io/portfolio-app/index.html';
+    const message = 'Check out this amazing tour guide: https://gorienich.github.io/Rafi-Tours/';
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
   }
 
   function shareOnFacebook() {
-    const url = 'https://gorienich.github.io/portfolio-app/index.html';
+    const url = 'https://gorienich.github.io/Rafi-Tours/';
     const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
     window.open(facebookURL, '_blank');
   }
 
   function shareOnInstagram() {
-    const url = 'https://gorienich.github.io/portfolio-app/index.html';
+    const url = 'https://gorienich.github.io/Rafi-Tours/';
     const instagramURL = `https://www.instagram.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
     window.open(instagramURL, '_blank');
   }
 
   function shareOnTiktok() {
-    const url = 'https://gorienich.github.io/portfolio-app/index.html';
+    const url = 'https://gorienich.github.io/Rafi-Tours/';
     const tiktokURL = `https://www.tiktok.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
     window.open(tiktokURL, '_blank');
   }
 
   function shareOnVK() {
-    const url = 'https://gorienich.github.io/portfolio-app/index.html';
+    const url = 'https://gorienich.github.io/Rafi-Tours/';
     const vkURL = `https://vk.com/share.php?url=${encodeURIComponent(url)}`;
     window.open(vkURL, '_blank');
   }

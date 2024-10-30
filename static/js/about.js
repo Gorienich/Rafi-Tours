@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
           button.textContent = 'Скрыть';
         } else {
           moreText.style.display = 'none';
-          button.textContent = 'Скрыть';
+          button.textContent = 'ещё';
         }
       });
     });

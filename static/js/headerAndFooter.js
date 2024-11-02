@@ -52,50 +52,42 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('click', closeMenu);
   });
 
-  /* Share buttons */
-  const whatsappShareButton = document.getElementById("whatsappShare");
-  const facebookShareButton = document.getElementById("facebookShare");
-  const instagramShareButton = document.getElementById("instagramShare");
-  const tiktokShareButton = document.getElementById("tiktokShare");
-  const vk = document.getElementById("vk");
+// Share buttons
+const whatsappShareButton = document.getElementById("whatsappShare");
+const facebookShareButton = document.getElementById("facebookShare");
+const telegramShareButton = document.getElementById("telegramShare");
+const vkShareButton = document.getElementById("vk");
 
-  // Add event listeners
-  whatsappShareButton.addEventListener('click', shareOnWhatsApp);
-  facebookShareButton.addEventListener('click', shareOnFacebook);
-  instagramShareButton.addEventListener('click', shareOnInstagram);
-  tiktokShareButton.addEventListener('click', shareOnTiktok);
-  vk.addEventListener('click', shareOnVK);
+// Add event listeners
+whatsappShareButton.addEventListener('click', shareOnWhatsApp);
+facebookShareButton.addEventListener('click', shareOnFacebook);
+telegramShareButton.addEventListener('click', shareOnTelegram);
+vkShareButton.addEventListener('click', shareOnVK);
 
-  // Share functions 
-  function shareOnWhatsApp() {
-    const phoneNumber = ''; // Add your phone number here
+// Share functions 
+function shareOnWhatsApp() {
     const message = 'Check out this amazing tour guide: https://gorienich.github.io/Rafi-Tours/';
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
-  }
+}
 
-  function shareOnFacebook() {
+function shareOnFacebook() {
     const url = 'https://gorienich.github.io/Rafi-Tours/';
     const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
     window.open(facebookURL, '_blank');
-  }
+}
 
-  function shareOnInstagram() {
+function shareOnTelegram() {
     const url = 'https://gorienich.github.io/Rafi-Tours/';
-    const instagramURL = `https://www.instagram.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-    window.open(instagramURL, '_blank');
-  }
+    const telegramURL = `https://t.me/share/url?url=${encodeURIComponent(url)}`;
+    window.open(telegramURL, '_blank');
+}
 
-  function shareOnTiktok() {
-    const url = 'https://gorienich.github.io/Rafi-Tours/';
-    const tiktokURL = `https://www.tiktok.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-    window.open(tiktokURL, '_blank');
-  }
-
-  function shareOnVK() {
+function shareOnVK() {
     const url = 'https://gorienich.github.io/Rafi-Tours/';
     const vkURL = `https://vk.com/share.php?url=${encodeURIComponent(url)}`;
     window.open(vkURL, '_blank');
-  }
+}
+
 
 });

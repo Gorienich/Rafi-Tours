@@ -1,8 +1,9 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 .headerMobile {
   display: none; /* Hide by default for desktop */
 }
@@ -29,7 +30,7 @@
   transition: all ease 0.5s;
 }
 
-.header a:hover{
+.header a:hover {
   color: azure;
   font-size: 1.25rem;
   transition: all ease 0.5s;
@@ -55,29 +56,32 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #003366;
   justify-content: center;
   align-items: center;
   z-index: 5;
   transform: translateY(-100%); /* Hide the menu off-screen initially */
   transition: transform 0.5s ease-in-out; /* Smooth transition */
+  position: fixed;
+  z-index: 5;
 }
 
 .menu-active {
   transform: translateY(0); /* Move the menu back to its normal position */
 }
 
-.menu-active li{
+.menu-active li {
   margin: 1.2rem;
 }
 
-.menu-active .close-button{
+.menu-active .close-button {
   position: absolute;
   top: 64px;
   right: 64px;
   font-size: 3rem;
 }
+
 .menu ul {
   list-style-type: none;
 }
@@ -88,49 +92,101 @@
   margin: 1rem;
   text-decoration: none;
 }
-
 /* footer */
-.footer-section{
+.footer-section {
   text-align: center;
+  padding: 2rem 0; /* Added padding for spacing */
+  background-color: black; /* Light background for footer */
+  position: relative; /* Position relative for absolute positioning of the wave */
 }
+
+.footer-section h2 {
+  color: azure;
+}
+
+/* Create a wave effect using clip-path */
+.footer-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%; /* Position above the footer */
+  height: 100px; /* Height of the wave */
+  background-color: #003366; /* Wave color */
+  clip-path: polygon(0 100%, 25% 80%, 50% 100%, 75% 70%, 100% 100%); /* Define the wave shape */
+  z-index: -1; /* Ensure the wave is behind the footer content */
+}
+
+
 .icons {
   display: flex;
-  gap: 10px;
+  gap: 2rem;
   margin-top: 1rem;
   justify-content: center;
 }
 
+/* General style for all icons */
 .icon-box {
-  width: 2rem;
-  height: 2rem;
-  margin: 0.5rem;
+  transition: transform 0.3s; /* Smooth scaling effect */
 }
 
-.icon-box img {
+.icon-box:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.icon-box i {
+  font-size: 2rem; /* Adjust icon size */
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+/* WhatsApp Icon */
+.icon-box i.fa-whatsapp {
+  color: #25D366; /* WhatsApp green */
+}
+
+/* Facebook Icon */
+.icon-box i.fa-facebook {
+  color: #1877F2; /* Facebook blue */
+}
+
+/* Twitter Icon */
+.icon-box i.fa-twitter {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+/* Telegram Icon */
+.icon-box i.fa-telegram {
+  color: #0088cc; /* Telegram blue */
+}
+
+/* VK Icon */
+.icon-box i.fa-vk {
+  color: #4680C2; /* VK blue */
+}
+
+.contact div {
+  margin: 1rem;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
+.contact div  i.fa-whatsapp,
+.contact div i.fa-envelope,
+.contact div i.fa-phone{
+  color: red;
+  font-size: large;
+  margin: 0.2rem;
+  padding-top: 0.5rem;
+}
+.contact div i.fa-laptop-code{
+  color: rebeccapurple;
+  font-size: large;
+  margin: 0.2rem;
+  padding-top: 0.5rem;
+} 
 
-.icon-box:hover img {
-  transform: scale(1.12);
-  box-shadow: 0px 0px 12px azure;
-  transition: all ease 0.3s;
-}
-
-button{
-  background: transparent;
-  border: none;
-}
-
-.contact div{
-  margin: 0.5rem;
-}
-.highlight{
+.highlight {
   color: red;
 }
+
 /* Media Query: Mobile */
 @media (max-width: 768px) {
   .header {
@@ -144,5 +200,3 @@ button{
     background-color: #003366;
   }
 }
-
-

@@ -7,12 +7,18 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #003366;
-  padding: 0 12px;
+}
+main{
+  width: 100%;
+  max-width: 1024px;
+  position: relative;
+  margin: 0 auto;
 }
 
 h2{
   color: rgb(0, 211, 0);
   text-align: center;
+  margin-bottom: 1rem;
   
 }
 h3{
@@ -84,7 +90,6 @@ a:hover{
 .slider{
   position: relative;
   height: auto;
-  max-height: 680px;
   width: 90%;
   margin: 1rem auto 2rem auto;
   overflow: hidden;
@@ -130,7 +135,7 @@ img{
   border: none;
   padding: 1rem;
   cursor: pointer;
-  z-index: 10;
+  z-index: 3;
   font-size: 2rem;
   border-radius: 50%;
 }
@@ -153,14 +158,14 @@ img{
 /* services */
 #service{
   position: relative;
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   height:auto;
   margin: 2rem auto;
   padding: 10px;
   overflow: hidden;
   background: transparent;
-  box-shadow: 0 0 25px rgb(0, 0, 0), 0 0 25px red;
+  box-shadow: 0 0 25px rgb(0, 0, 0), 0 0 8px rgb(0, 211, 0);
   border-radius: 10px;
   background-color: #333;
 }
@@ -193,7 +198,6 @@ img{
 /* myTours */
 /* Basic styling and layout */
 #myTours {
-  max-width: 1000px;
   margin: auto;
   width: 90%;
   
@@ -218,7 +222,7 @@ img{
 .tour-slider {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-height: 480px;
   margin: auto;
   overflow: hidden;
   border-radius: 8px;
@@ -278,8 +282,14 @@ img{
   .guide-pic {
     flex-direction: column;
   }
+  .box{
+    text-align: left;
+    width: 100%;
+  }
   .box p{
     font-size: large;
+    text-align: left;
+    width: 100%;
   }
 
   .service-slide img {
@@ -304,8 +314,6 @@ img{
 
 }
 
-
-
 /* button top-to-scroll */
 .scroll-to-top {
   position: fixed;
@@ -315,7 +323,7 @@ img{
   text-align: center;
   bottom: 20px;
   right: 20px;
-  z-index: 5;
+  z-index: 4;
   background-color: #007bff94;
   color: white;
   border: none;
